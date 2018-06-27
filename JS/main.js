@@ -41,7 +41,11 @@ getMovies = searchText => {
       });
       document.getElementById("movies").innerHTML += output;
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      if (err == "Movie not found!") {
+        document.getElementById("movies").innerHTML = "Movie not Found!";
+      }
+    });
   document.getElementById("loader").style.display = "none";
 };
 
