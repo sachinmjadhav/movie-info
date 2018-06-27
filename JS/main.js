@@ -33,7 +33,7 @@ getMovies = searchText => {
               <h5 class="card-title text-white">${movie.Title}</h5>
               <a onclick="movieSelected('${
                 movie.imdbID
-              }')" class="btn btn-primary text-white" href="#">Movie Details</a>
+              }')" class="btn btn-primary text-white" href="movie.html">Movie Details</a>
             </div>
           </div>
         </div>
@@ -47,7 +47,6 @@ getMovies = searchText => {
 
 movieSelected = id => {
   sessionStorage.setItem("movieId", id);
-  window.location = "movie.html";
   return false;
 };
 
