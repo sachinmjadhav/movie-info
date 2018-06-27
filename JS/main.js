@@ -42,7 +42,7 @@ getMovies = searchText => {
       document.getElementById("movies").innerHTML += output;
     })
     .catch(err => {
-      if (err == "Movie not found!") {
+      if (err.Error === "Movie not found!") {
         document.getElementById("movies").innerHTML = "Movie not Found!";
       }
     });
